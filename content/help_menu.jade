@@ -1,0 +1,8 @@
+.help-menu
+    i.ic-folder-1
+    h2.scrolltop 快速开始
+    ul
+        each val, index in ['旧财辅报账平台', '新财辅报账平台', '扫描员扫描', '部门审批', '归口审批', '分公司财务稽核','SSC费用会计','SSC复核会计','SSC出纳','查询支付信息']
+            li
+                i.ic-document-1
+                a.help-list(rel= 'section' + index)= val

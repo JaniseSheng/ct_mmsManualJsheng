@@ -1,0 +1,142 @@
+nav.purple {
+  .button {
+    color: @purple2;
+  }
+  .button.sign-up {
+    color: @white;
+    &:hover {
+      color: @dodger_blue;
+    }
+    @media (max-width: 767px) {
+      color: @purple2;
+      padding-left: 12px;
+      padding-right: 12px;
+      &:hover {
+        border: 1px solid transparent;
+        color: @dodger_blue;
+      }
+    }
+  }
+  .button.log-in {
+    padding-left: 12px;
+    padding-right: 12px;
+    &:hover {
+      border: 1px solid transparent;
+      color: @dodger_blue;
+    }
+  }
+}
+
+.logo.purple {
+  color: @purple2;
+  cursor: pointer;
+  .transition-property(color);
+  .transition-duration(500ms);
+  &:hover {
+    color: @dodger_blue;
+  }
+}
+
+ul.tabs {
+  padding: 0;
+  display: inline-block;
+  color: @purple2;
+  font-size: 16px;
+  a.tab {
+    padding: 13px 12px 11px 12px;
+    .transition-property(all);
+    .transition-duration(500ms);
+    &:hover {
+      color: @dodger_blue;
+    }
+    @media (max-width: 767px) {
+      font-size: 14px;
+    }
+  }
+  a.tab.activ {
+    color: @dodger_blue;
+  }
+}
+
+.panel  {
+  display: none;
+  opacity: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-animation: anim 1s backwards;
+  animation: anim 1s backwards;
+}
+
+.panel.activ {
+  display: block;
+  -webkit-animation: anim 1s forwards;
+  animation: anim 1s forwards;
+}
+
+@-webkit-keyframes anim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes anim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#terms-of-service,
+#privacy {
+  .w-container {
+    p {
+      margin-top: 24px;
+    }
+
+    .privacy-content {
+      padding: 24px 0 64px 24px;
+    }
+
+    span {
+      padding: 0 3px;
+    }
+
+    .additional {
+
+    }
+
+    > ul {
+      padding-left: 24px;
+      > li {
+        padding: 24px 0;
+        border-bottom: 1px solid @silver;
+        list-style-position: outside;
+        list-style-type: upper-alpha;
+        &:last-of-type {
+          border: none;
+        }
+        > ul > li {
+          margin-top: 12px;
+          list-style-position: outside;
+          list-style-type: decimal;
+          > ul {
+            padding: 0;
+            margin-top: 12px;
+            > li {
+              list-style-position: inside;
+              font-size: 14px;
+              color: @dark_gray;
+            }
+          }
+        }
+      }
+    }
+  }
+}

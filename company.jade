@@ -1,0 +1,30 @@
+doctype html
+html(class='js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths')
+    head
+        include ./layout/company-head
+        +title('帮助中心 choices form')
+        meta(name='巧思 choice form', content='最专业的在线问卷系统')
+        meta(name='description', content='巧思 choice form 最专业的在线问卷系统')
+        meta(name='keywords', content='choice form,form,forms,choice,巧思问卷,调研,表单,在线问卷,问卷设计,')
+    body.nano
+        .help-title
+            .w-container.help
+                ul.help-path
+                    a#fastMenu
+                p#mmstitle MSS系统-合同制员工年休假补贴报账指引
+                img(id='mmslogo' src='./content/images/logo.png')
+        div#mmsMenu
+        div.nano-content
+            #ws-container
+                include content/help_mainContent
+    script.
+        $(".nano").nanoScroller({iOSNativeScrolling: true});
+    script.
+        var config = {
+            viewport: document.getElementById('ws-container'),
+            reset: false,
+            vFactor: 0.3,
+            mobile: false
+        }
+    script.
+        mmsEvent.autoLoadMenu();
