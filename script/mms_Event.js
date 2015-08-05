@@ -135,10 +135,12 @@ var mmsEvent = (function(){
                     var clintwidth = document.body.clientWidth;
                     if(clintwidth>991){
                         markSmallScreen=0;
+                        $(".help-menu").removeClass("menu_shadow");
                         mmsEvent.helpMenuFixed();
                         mmsEvent.helpSectionScroll();
                     }else{
                         markSmallScreen=1;
+                        $(".help-menu").addClass("menu_shadow");
                         mmsEvent.helpMenuFixedMobile();
                         mmsEvent.helpSectionScroll();
                     }
