@@ -2428,6 +2428,10 @@ section > .shortcut p:last-of-type {
   color: #ffffff;
 }
 .help-menu {
+  border-bottom: 1px solid black;
+  -webkit-box-shadow: #666 0px 0px 10px;
+  -moz-box-shadow: #666 0px 0px 10px;
+  box-shadow: #666 0px 3px 10px;
   top: 70px;
   position: relative;
   display: block;

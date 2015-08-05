@@ -27,4 +27,20 @@ html(class='js flexbox canvas canvastext webgl no-touch geolocation postmessage 
             mobile: false
         }
     script.
-        mmsEvent.autoLoadMenu();
+        var imgdefereds = [];
+        $('img').each(function () {
+            var dfd = $.Deferred();
+            $(this).bind('load', function () {
+                dfd.resolve();
+            }).bind('error', function () {
+                alert("有图片加载错误,请刷新")
+            })
+            if (this.complete) setTimeout(function () {
+                dfd.resolve();
+            }, 1000);
+            imgdefereds.push(dfd);
+        })
+        $.when.apply(null, imgdefereds).done(function () {
+            mmsEvent.autoLoadMenu();
+        });
+
